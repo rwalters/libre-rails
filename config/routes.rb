@@ -1,4 +1,6 @@
 Libre::Application.routes.draw do
+  resources :pieces
+
   devise_for :users
 
   root :to => "home#index"
