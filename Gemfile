@@ -6,10 +6,16 @@ gem 'rails', '3.1.0'
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
 
 gem 'mysql2'
+gem 'sanitize'
+
+gem 'acts_as_commentable_with_threading'
+gem 'social_engine'
 
 gem 'haml'
 gem 'devise'
 gem 'kaminari'
+
+gem 'thin'
 
 # Gems used only for assets and not required
 # in production environments by default.
