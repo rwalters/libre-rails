@@ -1,6 +1,9 @@
 class User < ActiveRecord::Base
-  is_rateable
-  is_favoriteable
+  has_reputation
+  is_social
+  is_friendable
+
+  has_many :pieces
 
   # Include default devise modules. Others available are:
   # :token_authenticatable, :encryptable, :confirmable, :lockable, :timeoutable and :omniauthable

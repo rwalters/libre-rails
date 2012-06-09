@@ -1,11 +1,11 @@
 .block.notice
-  %h3 Simple Block
+  %h3 Overview
   .content
-    %p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+    %p Just read, write, and enjoy!
 .block
   %h3 Links
   %ul.navigation
     %li
-      %a{:href => "#"} Link 1
+      = link_to "#{t("web-app-theme.list", :default => "List Stories")}", pieces_path
     %li
-      %a{:href => "#"} Link 2
+      = link_to "#{t("web-app-theme.new", :default => "New Story")}", new_piece_path

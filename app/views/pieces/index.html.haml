@@ -25,9 +25,10 @@
               = piece.created_at
             %td.last
               = link_to "#{t("web-app-theme.show", :default => "Show")}", piece_path(piece)
-              |
-              \#{link_to "#{t("web-app-theme.edit", :default => "Edit")}", edit_piece_path(piece)} |
-              \#{link_to "#{t("web-app-theme.delete", :default => "Delete")}", piece_path(piece), :method => :delete, :confirm => "#{t("web-app-theme.confirm", :default => "Are you sure?")}"}
+              - if piece.user == current_user
+                |
+                \#{link_to "#{t("web-app-theme.edit", :default => "Edit")}", edit_piece_path(piece)} |
+                \#{link_to "#{t("web-app-theme.delete", :default => "Delete")}", piece_path(piece), :method => :delete, :confirm => "#{t("web-app-theme.confirm", :default => "Are you sure?")}"}
       .actions-bar.wat-cf
         .actions
         = paginate @pieces

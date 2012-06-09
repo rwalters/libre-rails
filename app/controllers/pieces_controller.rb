@@ -40,7 +40,7 @@ class PiecesController < ApplicationController
   # POST /pieces
   # POST /pieces.json
   def create
-    @piece = Piece.new(params[:piece])
+    @piece = current_user.pieces.new(params[:piece])
 
     respond_to do |format|
       if @piece.save

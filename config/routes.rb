@@ -6,7 +6,7 @@ Libre::Application.routes.draw do
   root :to => "home#index"
 
   resources :pieces do
-    resources :ratings, :favorites
+    resources :comments, :ratings, :favorites
   end
 
   # The priority is based upon order of creation:
